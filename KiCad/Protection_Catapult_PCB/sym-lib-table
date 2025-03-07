@@ -2,4 +2,6 @@
   (version 7)
   (lib (name "A4988_STEPPER_MOTOR_DRIVER_CARRIER")(type "KiCad")(uri "D:/Usuarios/sercrr/Documents/GITLAB/Projects/16. Protection catapult/KiCad/Libraries/A4988_STEPPER_MOTOR_DRIVER_CARRIER/A4988_STEPPER_MOTOR_DRIVER_CARRIER.kicad_sym")(options "")(descr ""))
   (lib (name "Custom_dc_dc_small")(type "Legacy")(uri "D:/Usuarios/sercrr/Documents/GITLAB/Projects/16. Protection catapult/KiCad/Libraries/Custom_dc_dc_small/Custom_dc_dc_small.lib")(options "")(descr ""))
+  (lib (name "A4988_STEPPER_MOTOR_DRIVER_CARRIER_2")(type "KiCad")(uri "C:/Users/sergi/OneDrive/Escritorio/GitHub/16. Catapult/KiCad/Libraries/A4988_STEPPER_MOTOR_DRIVER_CARRIER/A4988_STEPPER_MOTOR_DRIVER_CARRIER.kicad_sym")(options "")(descr ""))
+  (lib (name "Custom_dc_dc_small_2")(type "Legacy")(uri "C:/Users/sergi/OneDrive/Escritorio/GitHub/16. Catapult/KiCad/Libraries/Custom_dc_dc_small/Custom_dc_dc_small.lib")(options "")(descr ""))
 )

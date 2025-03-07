@@ -3,4 +3,7 @@
   (lib (name "A4988_STEPPER_MOTOR_DRIVER_CARRIER")(type "KiCad")(uri "D:/Usuarios/sercrr/Documents/GITLAB/Projects/16. Protection catapult/KiCad/Libraries/A4988_STEPPER_MOTOR_DRIVER_CARRIER")(options "")(descr ""))
   (lib (name "DC_DC_LM2596_small")(type "KiCad")(uri "D:/Usuarios/sercrr/Documents/GITLAB/Projects/16. Protection catapult/KiCad/Libraries/DC_DC_LM2596_small.pretty/DC_DC_LM2596_small.pretty")(options "")(descr ""))
   (lib (name "Custom_dc_dc_small")(type "KiCad")(uri "D:/Usuarios/sercrr/Documents/GITLAB/Projects/16. Protection catapult/KiCad/Libraries/Custom_dc_dc_small")(options "")(descr ""))
+  (lib (name "A4988_STEPPER_MOTOR_DRIVER_CARRIER_2")(type "KiCad")(uri "C:/Users/sergi/OneDrive/Escritorio/GitHub/16. Catapult/KiCad/Libraries/A4988_STEPPER_MOTOR_DRIVER_CARRIER")(options "")(descr ""))
+  (lib (name "DC_DC_LM2596_small_2")(type "KiCad")(uri "C:/Users/sergi/OneDrive/Escritorio/GitHub/16. Catapult/KiCad/Libraries/DC_DC_LM2596_small.pretty/DC_DC_LM2596_small.pretty")(options "")(descr ""))
+  (lib (name "Custom_dc_dc_small_2")(type "KiCad")(uri "C:/Users/sergi/OneDrive/Escritorio/GitHub/16. Catapult/KiCad/Libraries/Custom_dc_dc_small")(options "")(descr ""))
 )
