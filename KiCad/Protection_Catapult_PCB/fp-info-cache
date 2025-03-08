@@ -1,4 +1,4 @@
-24497970038048185
+24501452934438733
 A4988_STEPPER_MOTOR_DRIVER_CARRIER_2
 MODULE_A4988_STEPPER_MOTOR_DRIVER_CARRIER
 
@@ -69671,6 +69671,13 @@ ESP32-S3
 44
 44
 PCM_Espressif
+ESP32-S3-DevKitC_1
+ESP32-S3 general-purpose development board, based on ESP32-S3-WROOM-1 or ESP32-S3-WROOM-1U,It has all the ESP32-S3 pins exposed and is easy to connect and use.
+ESP32-S3
+0
+44
+44
+PCM_Espressif
 ESP32-S3-MINI-1
 ESP32-S3-MINI-1
 esp32-s3
@@ -69740,6 +69747,13 @@ esp32 module thermal vias
 0
 59
 39
+PCM_Espressif
+ESP32S3-MINI
+
+
+0
+0
+0
 PCM_Espressif
 ESP8685-WROOM-06
 ESP32-WROOM-06: https://www.espressif.com/sites/default/files/documentation/esp8685-wroom-06_datasheet_en.pdf
