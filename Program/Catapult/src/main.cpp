@@ -37,6 +37,7 @@ void loop()
     digitalWrite(7, HIGH);
     digitalWrite(8, HIGH);
     miServo.write(65); // Mover el servo a 0 grados
+    delay(1000);
     digitalWrite(7, HIGH);
     digitalWrite(8, LOW);
     delay(10000);
