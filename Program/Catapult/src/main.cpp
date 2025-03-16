@@ -5,12 +5,12 @@
 #include <SinricPro.h>
 #include "Accionador.h"
 
-#define APP_KEY "f5b6b057-f65b-4c34-b595-489667228191"
-#define APP_SECRET "d9760d34-c170-4323-9a23-87303b92d7ba-b098499e-3931-4297-93c6-d295e4dc6d9d"
-#define DEVICE_ID "67cf53f26066f22be0642e65"
+#define APP_KEY ""
+#define APP_SECRET ""
+#define DEVICE_ID ""
 
-#define SSID "DIGIFIBRA-ctUQ"
-#define PASS "3T67UeAPkNU7"
+#define SSID ""
+#define PASS ""
 
 #define BAUD_RATE 115200
 
@@ -168,6 +168,9 @@ void setup()
   pinMode(IN2, OUTPUT);
   pinMode(IN3, OUTPUT);
   pinMode(IN4, OUTPUT);
+  digitalWrite(ENABLE, HIGH);
+  digitalWrite(Motor_DC_1, HIGH);
+  digitalWrite(Motor_DC_2, HIGH);
   Serial.begin(BAUD_RATE);
   setupWiFi();
   setupSinricPro();
@@ -196,10 +199,13 @@ void loop()
 
 void SacarCajon()
 {
+  digitalWrite(ENABLE, LOW);
   digitalWrite(DIR1, LOW);
   digitalWrite(DIR2, HIGH);
 
-  for (int i = 0; i < Steps_cajon; i++)
+  int pasos = abrir ? Steps_cajon : cerrar ? Steps_cajon
+                                           : Steps_cajon - 1000;
+  for (int i = 0; i < pasos; i++)
   {
     digitalWrite(STEP1, HIGH);
     digitalWrite(STEP2, HIGH);
@@ -208,14 +214,17 @@ void SacarCajon()
     digitalWrite(STEP2, LOW);
     delayMicroseconds(250);
   }
+  digitalWrite(ENABLE, HIGH);
 }
 
 void MeterCajon()
 {
+  digitalWrite(ENABLE, LOW);
   digitalWrite(DIR1, HIGH);
   digitalWrite(DIR2, LOW);
-
-  for (int i = 0; i < Steps_cajon; i++)
+  int pasos = abrir ? Steps_cajon : cerrar ? Steps_cajon
+                                           : Steps_cajon - 1000;
+  for (int i = 0; i < pasos + 100; i++)
   {
     digitalWrite(STEP1, HIGH);
     digitalWrite(STEP2, HIGH);
@@ -224,6 +233,7 @@ void MeterCajon()
     digitalWrite(STEP2, LOW);
     delayMicroseconds(250);
   }
+  digitalWrite(ENABLE, HIGH);
 }
 
 void SacarDisco()
@@ -250,8 +260,6 @@ void TareaSinricPro(void *Pvparameters)
 }
 void Control(void *Pvparameters)
 {
-  digitalWrite(Motor_DC_1, HIGH);
-  digitalWrite(Motor_DC_2, HIGH);
   miServo.attach(Servo_PIN);
   stepper.setMaxSpeed(500);
   stepper.setAcceleration(1000);
@@ -268,11 +276,11 @@ void Control(void *Pvparameters)
       delay(150);
       PararCargaCatapulta();
       miServo.write(65); // Trabar catapulta
+      MeterCajon();
       delay(1000);
       DescargarCatapulta();
       delay(10000); // Tiempo para soltar el hilo que recoge la catapulta
       PararCargaCatapulta();
-      MeterCajon();
       delay(1000);
       SacarDisco();
       delay(1000);
